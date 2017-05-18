@@ -53,8 +53,8 @@ function init_env
 echo start
 init_env
 mkdir -p $BASEDIR
-export JAVA_HOME=$BASEDIR/java
-export JRE_HOME=$BASEDIR/java/jre
+export JAVA_HOME=$BASEDIR/jdk1.8.0_121
+export JRE_HOME=$BASEDIR/jdk1.8.0_121/jre
 export PATH=$PATH:$JAVA_HOME/bin
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/rt.jar
 cd $BASEDIR
