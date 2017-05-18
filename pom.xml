@@ -3,7 +3,7 @@
   <groupId>com.elong.hotel</groupId>
   <artifactId>hotel-second-monitor</artifactId>
   <packaging>war</packaging>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>hotel-second-monitor</name>
   <url>http://maven.apache.org</url>
   <!-- scm git trunk -->
