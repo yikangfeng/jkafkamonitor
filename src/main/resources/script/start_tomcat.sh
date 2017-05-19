@@ -50,8 +50,7 @@ function init_env
 	echo end
 }
 
-echo start
-rm -fr $BASEDIR/$SER_NAME 
+echo start 
 init_env
 mkdir -p $BASEDIR
 export JAVA_HOME=$BASEDIR/jdk1.8.0_121

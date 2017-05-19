@@ -14,6 +14,7 @@ SRCFILE=/home/work/tmp/template
 
 #####START#####
 echo start
+rm -fr $SER_BASE
 mkdir -p $SER_BASE
 if [ ! -d "$BASEDIR/$TOMCAT_NAME" ]; then
  echo do not exist $BASEDIR/$TOMCAT_NAME
