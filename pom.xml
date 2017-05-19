@@ -2,7 +2,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.elong.hotel</groupId>
-	<artifactId>hotel-second-monitor</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>hotel-second-monitor</name>
@@ -59,20 +58,6 @@
 		<version>1.5.2.RELEASE</version>
 	</parent>
 
-	<distributionManagement>
-		<repository>
-			<id>hotel-releases</id>
-			<name>Nexus Release Repository</name>
-			<url>http://mvn.elong.cn:8081/nexus/content/repositories/hotelmisreleases</url>
-		</repository>
-		<snapshotRepository>
-			<id>hotel-snapshots</id>
-			<name>Nexus Snapshot Repository</name>
-			<url>http://mvn.elong.cn:8081/nexus/content/repositories/hotelmissnapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<!-- dependencies -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -167,4 +152,5 @@
 		</dependency>
 	</dependencies>
 
+	<artifactId>hotel-second-monitor</artifactId>
 </project>
