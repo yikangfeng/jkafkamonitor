@@ -24,5 +24,5 @@ else
  $BASEDIR/$TOMCAT_NAME/bin/stop_tomcat.sh
  rm -fr $SER_BASE
  mkdir -p $SER_BASE
- exit $?
+ exit 0
 fi
