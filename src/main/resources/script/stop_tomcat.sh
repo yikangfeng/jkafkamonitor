@@ -17,12 +17,10 @@ echo start
 mkdir -p $SER_BASE
 if [ ! -d "$BASEDIR/$TOMCAT_NAME" ]; then
  echo do not exist $BASEDIR/$TOMCAT_NAME
- rm -fr $SER_BASE
- mkdir -p $SER_BASE
+ rm -fr $SER_BASE/$SER_NAME
  exit 0
 else
  $BASEDIR/$TOMCAT_NAME/bin/stop_tomcat.sh
- rm -fr $SER_BASE
- mkdir -p $SER_BASE
+ rm -fr $SER_BASE/$SER_NAME
  exit 0
 fi
