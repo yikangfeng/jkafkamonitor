@@ -70,7 +70,7 @@ if [ -f $SER_NAME.war ]; then
 fi
 #unalias cp
 cp -rf "$BASEDIR/$SER_NAME/conf" "$BASEDIR/$SER_NAME/WEB-INF/classes/"
-rm "$SER_NAME.war"
+#rm "$SER_NAME.war"
 rm -rf server.xml
 $BASEDIR/$TOMCAT_NAME/bin/start_tomcat.sh &>/dev/null
 result=$?
