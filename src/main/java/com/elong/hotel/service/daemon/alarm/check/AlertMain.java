@@ -73,7 +73,10 @@ public class AlertMain {
 		}
 		checkAndCreateDependFile();
 		ArgsVO vo = CommonUtils.convertVO(args[0]);
-		if (checkAlertUrl(vo.getCheckurl(), vo.getTimeout(), vo.getRetryTimes()) != 200) {
+		int retCode = checkAlertUrl(vo.getCheckurl(), vo.getTimeout(), vo.getRetryTimes());
+		LOGGER.info("hotel second monitor service check alarm service return code={},record time={}", retCode,
+				new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+		if (retCode != 200) {
 			if (CommonUtils.isAlert(vo)) {
 				sendAlertMessage(vo.getUsers());
 			}
@@ -254,7 +257,8 @@ public class AlertMain {
 					httpGet.abort();
 				}
 			}
-		} catch (Exception e) {
+		} catch (Throwable t) {
+			LOGGER.error("hotel second monitor service check alert service error,return code={},reasons:", retCode, t);
 			// 异常
 			retCode = -100;
 		} finally {
